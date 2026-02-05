@@ -1,453 +1,499 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karina Bueno - Bitcoin & Crypto Consulting</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #e2e8f0;
-            line-height: 1.6;
-            padding: 30px 15px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(247, 147, 26, 0.2);
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 25px;
-            border-bottom: 2px solid rgba(247, 147, 26, 0.3);
-        }
-        h1 {
-            font-size: 38px;
-            font-weight: 300;
-            letter-spacing: 3px;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-        .tagline {
-            font-size: 15px;
-            color: #F7931A;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-        .credentials {
-            font-size: 13px;
-            color: #94a3b8;
-            letter-spacing: 0.5px;
-        }
-        .intro {
-            font-size: 17px;
-            color: #cbd5e1;
-            margin: 25px 0 30px;
-            line-height: 1.8;
-            text-align: center;
-        }
-        .emphasis-box {
-            background: linear-gradient(135deg, rgba(247, 147, 26, 0.1), rgba(245, 158, 11, 0.05));
-            border-left: 4px solid #F7931A;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 35px;
-            font-size: 15px;
-            text-align: center;
-        }
-        .section {
-            margin-bottom: 35px;
-        }
-        .about {
-            background: rgba(15, 23, 42, 0.5);
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(247, 147, 26, 0.2);
-        }
-        .about p {
-            color: #cbd5e1;
-            margin-bottom: 13px;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-        h2 {
-            font-size: 24px;
-            color: #F7931A;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-        .card {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
-            border: 2px solid rgba(247, 147, 26, 0.3);
-            border-radius: 14px;
-            padding: 28px;
-            margin-bottom: 25px;
-            position: relative;
-            overflow: hidden;
-        }
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #F7931A, #fb923c);
-        }
-        .card-title {
-            font-size: 22px;
-            color: #ffffff;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .price {
-            font-size: 32px;
-            color: #F7931A;
-            font-weight: 600;
-            margin: 15px 0;
-        }
-        .card-intro {
-            font-size: 14px;
-            color: #cbd5e1;
-            margin-bottom: 18px;
-            line-height: 1.6;
-            font-style: italic;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-        li {
-            color: #cbd5e1;
-            padding: 8px 0;
-            padding-left: 28px;
-            position: relative;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #F7931A;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .info-box {
-            background: rgba(247, 147, 26, 0.1);
-            border: 1px solid rgba(247, 147, 26, 0.3);
-            padding: 18px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .info-box h4 {
-            color: #F7931A;
-            font-size: 14px;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .info-box ul {
-            margin-bottom: 0;
-        }
-        .info-box li {
-            font-size: 13px;
-            padding: 5px 0;
-        }
-        .info-box p {
-            color: #cbd5e1;
-            font-size: 13px;
-            line-height: 1.6;
-            margin: 0;
-        }
-        .note-box {
-            background: rgba(96, 165, 250, 0.1);
-            border: 1px solid rgba(96, 165, 250, 0.3);
-            padding: 18px;
-            border-radius: 8px;
-            margin-top: 18px;
-        }
-        .note-box h4 {
-            color: #60a5fa;
-            font-size: 14px;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        .note-box p {
-            color: #cbd5e1;
-            font-size: 13px;
-            line-height: 1.6;
-            margin: 0;
-        }
-        .disclaimer {
-            background: rgba(239, 68, 68, 0.08);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            padding: 28px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-        }
-        .disclaimer h3 {
-            color: #fca5a5;
-            font-size: 20px;
-            margin-bottom: 18px;
-            text-align: center;
-        }
-        .disclaimer p {
-            color: #fca5a5;
-            font-size: 13px;
-            line-height: 1.7;
-            margin-bottom: 13px;
-        }
-        .disclaimer-critical {
-            background: rgba(239, 68, 68, 0.15);
-            padding: 18px;
-            border-radius: 8px;
-            border-left: 4px solid #ef4444;
-            margin-top: 18px;
-        }
-        .disclaimer-critical p {
-            margin-bottom: 0;
-        }
-        .contact {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(37, 99, 235, 0.08));
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        .contact h2 {
-            color: #60a5fa;
-            margin-bottom: 18px;
-        }
-        .contact p {
-            color: #cbd5e1;
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-        .highlight {
-            color: #F7931A;
-            font-weight: 500;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(247, 147, 26, 0.2);
-            color: #64748b;
-            font-size: 12px;
-        }
-        @media (max-width: 768px) {
-            .container { padding: 25px 20px; }
-            h1 { font-size: 28px; }
-            .price { font-size: 26px; }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina Bueno - Bitcoin & Crypto Consulting</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(247, 147, 26, 0.2);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(247, 147, 26, 0.3);
+        }
+        h1 {
+            font-size: 38px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            font-size: 15px;
+            color: #F7931A;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .credentials {
+            font-size: 13px;
+            color: #94a3b8;
+            letter-spacing: 0.5px;
+        }
+        .intro {
+            font-size: 17px;
+            color: #cbd5e1;
+            margin: 25px 0 30px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        .emphasis-box {
+            background: linear-gradient(135deg, rgba(247, 147, 26, 0.1), rgba(245, 158, 11, 0.05));
+            border-left: 4px solid #F7931A;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 35px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .about {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(247, 147, 26, 0.2);
+        }
+        .about p {
+            color: #cbd5e1;
+            margin-bottom: 13px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        h2 {
+            font-size: 24px;
+            color: #F7931A;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+            border: 2px solid rgba(247, 147, 26, 0.3);
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #F7931A, #fb923c);
+        }
+        .card-title {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .price {
+            font-size: 32px;
+            color: #F7931A;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        .card-intro {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 18px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        li {
+            color: #cbd5e1;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #F7931A;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .info-box {
+            background: rgba(247, 147, 26, 0.1);
+            border: 1px solid rgba(247, 147, 26, 0.3);
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .info-box h4 {
+            color: #F7931A;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .info-box ul {
+            margin-bottom: 0;
+        }
+        .info-box li {
+            font-size: 13px;
+            padding: 5px 0;
+        }
+        .info-box p {
+            color: #cbd5e1;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .note-box {
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 18px;
+        }
+        .note-box h4 {
+            color: #60a5fa;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .note-box p {
+            color: #cbd5e1;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .disclaimer {
+            background: rgba(239, 68, 68, 0.08);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+        .disclaimer h3 {
+            color: #fca5a5;
+            font-size: 20px;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .disclaimer p {
+            color: #fca5a5;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 13px;
+        }
+        .disclaimer-critical {
+            background: rgba(239, 68, 68, 0.15);
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
+            margin-top: 18px;
+        }
+        .disclaimer-critical p {
+            margin-bottom: 0;
+        }
+        .contact {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(37, 99, 235, 0.08));
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .contact h2 {
+            color: #60a5fa;
+            margin-bottom: 18px;
+        }
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        .highlight {
+            color: #F7931A;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(247, 147, 26, 0.2);
+            color: #64748b;
+            font-size: 12px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 20px; }
+            h1 { font-size: 28px; }
+            .price { font-size: 26px; }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>KARINA BUENO</h1>
-            <div class="tagline">Bitcoin & Crypto Consulting</div>
-            <div class="credentials">Lawyer • Mediator • Bitcoin Educator</div>
-        </header>
+    <div class="container">
+        <header>
+            <h1>KARINA BUENO</h1>
+            <div class="tagline">Bitcoin & Crypto Consulting</div>
+            <div class="credentials">Lawyer • Mediator • Bitcoin Educator</div>
+        </header>
 
-        <div class="intro">
-            I help crypto investors and businesses with <strong>personalized solutions</strong>. Not generic courses.
-        </div>
+```
+    <div class="intro">
+        I help digital asset investors and businesses with <strong>personalized solutions</strong>. Not generic courses.
+    </div>
 
-        <div class="emphasis-box">
-            <strong>Not courses. Not scripts.</strong><br>
-            YOUR situation. YOUR solution. YOUR pace.<br><br>
-            <span style="color: #F7931A; font-size: 16px;">🎯 Primary Focus: Bitcoin</span>
-        </div>
+    <div class="emphasis-box">
+        <strong>Not courses. Not scripts.</strong><br>
+        YOUR situation. YOUR solution. YOUR pace.<br><br>
+        <span style="color: #F7931A; font-size: 16px;">🎯 Primary Focus: Bitcoin</span>
+    </div>
 
-        <div class="section">
-            <div class="about">
-                <p><strong>My background combines:</strong></p>
-                <p>⚖️ <strong>Lawyer (BR - OAB/SP):</strong> Licensed to practice law in Brazil with expertise in clarity, legal structure, and confidentiality. For matters involving Swiss law, I work alongside qualified Swiss legal professionals to ensure full compliance and expert guidance.</p>
-                <p>🤝 <strong>Mediator & Conciliator:</strong> Specialized in active listening, conflict resolution, and guiding people toward practical solutions tailored to their unique situations.</p>
-                <p>💎 <strong>Bitcoin educator & investor:</strong> I've tested different protocols and strategies hands-on, learning what works and where the real risks are.</p>
-                <p style="margin-top: 13px;"><strong>My approach:</strong> As a trained mediator and lawyer, I listen first. What's YOUR specific challenge? What have you tried? What are you afraid of? Then we build a personalized solution together.</p>
-            </div>
-        </div>
+    <div class="section">
+        <div class="about">
+            <p><strong>My background combines:</strong></p>
+            <p>⚖️ <strong>Lawyer (BR - OAB/SP):</strong> Licensed to practice law in Brazil with expertise in clarity, legal structure, and confidentiality. For matters involving Swiss law, I work alongside qualified Swiss legal professionals to ensure full compliance and expert guidance.</p>
+            <p>🤝 <strong>Mediator & Conciliator:</strong> Specialized in active listening, conflict resolution, and guiding people toward practical solutions tailored to their unique situations.</p>
+            <p>💎 <strong>Bitcoin educator & investor:</strong> I've tested different protocols and strategies hands-on, learning what works and where the real risks are.</p>
+            <p style="margin-top: 13px;"><strong>My approach:</strong> As a trained mediator and lawyer, I listen first. What's YOUR specific challenge? What have you tried? What are you afraid of? Then we build a personalized solution together. <strong>My focus is finding a solution for whatever problem you have</strong> - whether it's technical, strategic, or educational.</p>
+        </div>
+    </div>
 
-        <div class="section">
-            <h2>Bitcoin & Crypto Consulting</h2>
-            
-            <div class="card">
-                <h3 class="card-title">💎 Individual Consultation</h3>
-                <div class="price">From CHF 190</div>
-                <p class="card-intro"><strong style="color: #F7931A;">Primary focus: Bitcoin</strong> • Starting from zero? Stuck after courses? Specific question or need complete guidance?</p>
-                
-                <div class="info-box">
-                    <h4>📋 Most Common Topics:</h4>
-                    <ul>
-                        <li>Wallet setup (hot & cold wallets)</li>
-                        <li>Withdrawing from exchanges safely</li>
-                        <li>Security best practices (seed phrases, backups)</li>
-                        <li>Bitcoin fundamentals & philosophy</li>
-                        <li>DCA strategies & accumulation planning</li>
-                        <li>Multi-sig & inheritance planning</li>
-                        <li>Understanding crypto beyond Bitcoin (altcoins, DeFi basics)</li>
-                    </ul>
-                </div>
+    <div class="section">
+        <h2>Bitcoin & Crypto Consulting</h2>
 
-                <p style="color: #94a3b8; font-size: 13px; font-style: italic; margin-top: 18px;">
-                    These are examples. Your consultation will be customized to address what matters most to YOU.
-                </p>
-            </div>
+        <div class="card">
+            <h3 class="card-title">💎 Individual Consultation</h3>
+            <div class="price">From CHF 190</div>
+            <p class="card-intro"><strong style="color: #F7931A;">Primary focus: Bitcoin</strong> • Starting from zero? Stuck after courses? Specific question or need complete guidance?</p>
 
-            <div class="card" style="border: 3px solid #F7931A; background: linear-gradient(135deg, rgba(247, 147, 26, 0.15), rgba(15, 23, 42, 0.8));">
-                <h3 class="card-title">💼 Mentorship Program (3 Sessions)</h3>
-                <div class="price">CHF 450</div>
-                <p class="card-intro"><strong style="color: #F7931A;">Complete guidance from start to implementation</strong> • Perfect for those who want comprehensive, hands-on support with accountability.</p>
-                
-                <div class="info-box">
-                    <h4>📅 What's Included:</h4>
-                    <ul>
-                        <li><strong>Session 1:</strong> Assessment, goal setting, and personalized action plan</li>
-                        <li><strong>Session 2:</strong> Implementation support, troubleshooting, and progress review</li>
-                        <li><strong>Session 3:</strong> Final review, advanced topics, and long-term strategy</li>
-                        <li>Customized PDF guide delivered after first session</li>
-                        <li>Message support between sessions via Signal</li>
-                        <li>Flexible scheduling over 4-8 weeks</li>
-                    </ul>
-                </div>
+            <div class="info-box">
+                <h4>📋 Most Common Topics:</h4>
+                <ul>
+                    <li>General questions and foundational understanding</li>
+                    <li>Wallet setup (hot & cold wallets)</li>
+                    <li>Withdrawing from exchanges safely</li>
+                    <li>Security best practices (seed phrases, backups)</li>
+                    <li>Bitcoin fundamentals & philosophy</li>
+                    <li>DCA strategies & accumulation planning</li>
+                    <li>Understanding digital assets beyond Bitcoin (altcoins, DeFi basics)</li>
+                </ul>
+            </div>
 
-                <p style="color: #cbd5e1; font-size: 13px; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.1); border-radius: 8px;">
-                    <strong>Best for:</strong> Complete beginners wanting structured guidance, or intermediate users tackling complex setups (multi-sig, inheritance planning, business implementation).
-                </p>
-            </div>
+            <p style="color: #94a3b8; font-size: 13px; font-style: italic; margin-top: 18px;">
+                These are examples. Your consultation will be customized to address what matters most to YOU.
+            </p>
+        </div>
 
-            <div class="card">
-                <h3 class="card-title">Follow-up or Advanced Topics</h3>
-                <div class="price">CHF 120/hour</div>
-                <p class="card-intro">For additional support, implementation questions, or exploring more advanced topics:</p>
-                
-                <ul>
-                    <li>DeFi protocols: staking, liquidity pools, borrow/lend (conservative strategies)</li>
-                    <li>Understanding smart contract risks and how to evaluate protocols</li>
-                    <li>Advanced security setups and cold storage solutions</li>
-                    <li>Lightning Network and Layer 2 solutions</li>
-                    <li>Privacy tools and techniques</li>
-                    <li>Technical troubleshooting and implementation support</li>
-                </ul>
-            </div>
+        <div class="card" style="border: 3px solid #F7931A; background: linear-gradient(135deg, rgba(247, 147, 26, 0.15), rgba(15, 23, 42, 0.8));">
+            <h3 class="card-title">💼 Mentorship Program (3 Sessions)</h3>
+            <div class="price">CHF 450</div>
+            <p class="card-intro"><strong style="color: #F7931A;">Complete guidance from start to implementation</strong> • Perfect for those who want comprehensive, hands-on support with accountability.</p>
 
-            <div class="note-box">
-                <h4>🔒 Confidentiality & Privacy</h4>
-                <p>All consultations are completely confidential. Your privacy is protected. When needed, I coordinate with qualified professionals (lawyers, accountants) to provide comprehensive support.</p>
-            </div>
-        </div>
+            <div class="info-box">
+                <h4>📅 What's Included:</h4>
+                <ul>
+                    <li><strong>Session 1:</strong> Assessment, goal setting, and personalized action plan</li>
+                    <li><strong>Session 2:</strong> Implementation support, troubleshooting, and progress review</li>
+                    <li><strong>Session 3:</strong> Final review, advanced topics, and long-term strategy</li>
+                    <li>Customized PDF guide delivered after first session</li>
+                    <li>Message support between sessions via Signal</li>
+                    <li>Flexible scheduling over 4-8 weeks</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>Business Consulting</h2>
-            
-            <div class="card">
-                <h3 class="card-title">🏢 Business Crypto Payment Adoption</h3>
-                <div class="price">From CHF 500</div>
-                <p class="card-intro">Want to accept Bitcoin payments but don't know where to start? We'll map YOUR business needs and build the right implementation plan.</p>
-                
-                <ul>
-                    <li>Payment integration strategy: step-by-step roadmap to start accepting Bitcoin/crypto payments safely</li>
-                    <li>Payment processor selection: BTCPay Server, Lightning Network, or third-party solutions</li>
-                    <li>Point-of-sale solutions: crypto payment terminals and QR code systems</li>
-                    <li>E-commerce integration: adding crypto checkout to your online store</li>
-                    <li>Marketing to crypto users: reaching the crypto-paying customer segment</li>
-                    <li>Risk management: volatility protection and best practices</li>
-                    <li>Team training: educating your staff on crypto payments</li>
-                </ul>
-                
-                <div class="note-box">
-                    <h4>📋 Support & Coordination</h4>
-                    <p>I provide technical and strategic guidance on crypto payment systems. For legal, regulatory, and tax matters, I coordinate with qualified Swiss professionals to ensure complete, compliant support.</p>
-                </div>
-                
-                <p style="color: #94a3b8; font-size: 13px; margin-top: 18px;">Contact for custom quote based on your business needs.</p>
-            </div>
-        </div>
+            <p style="color: #cbd5e1; font-size: 13px; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.1); border-radius: 8px;">
+                <strong>Best for:</strong> Complete beginners wanting structured guidance, or intermediate users tackling complex setups (multi-sig, inheritance planning, business implementation).
+            </p>
+        </div>
 
-        <div class="section">
-            <h2>Relocation & Real Estate Support</h2>
-            
-            <div class="card">
-                <h3 class="card-title">🇨🇭 Complete Relocation Support to Switzerland</h3>
-                <div class="price">From CHF 150</div>
-                <p class="card-intro">Moving to Switzerland's Bitcoin capital? As someone who relocated to Switzerland with my husband and 3 kids, I help with YOUR specific situation.</p>
-                
-                <ul>
-                    <li>Documentation guidance & registration support</li>
-                    <li>Professional network: connections with trusted Swiss specialists (lawyers, accountants)</li>
-                    <li>Housing search (rental & purchase) with premier agencies</li>
-                    <li>Remote property viewing: detailed video tours with honest commentary</li>
-                    <li>School search & recommendations for families</li>
-                    <li>Banking guidance: crypto-friendly banks and documentation help</li>
-                    <li>Complete setup: health insurance, utilities, internet</li>
-                    <li>Local orientation: neighborhoods, cost of living, integration tips</li>
-                    <li>Ongoing support throughout your transition</li>
-                </ul>
-                
-                <p style="color: #cbd5e1; font-size: 14px; font-style: italic; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.05); border-radius: 8px; border-left: 3px solid #F7931A;">
-                    <strong>Every relocation is unique.</strong> Contact me with your specific situation, and I'll provide a detailed proposal tailored exactly to what you need.
-                </p>
+        <div class="card">
+            <h3 class="card-title">Follow-up or Advanced Topics</h3>
+            <div class="price">CHF 120/hour</div>
+            <p class="card-intro">For additional support, implementation questions, or exploring more advanced topics:</p>
 
-                <div class="info-box" style="margin-top: 18px;">
-                    <h4>🇨🇭 Why Switzerland?</h4>
-                    <p>Switzerland offers exceptional quality of life, political stability, and a crypto-friendly regulatory environment. Lugano, known as Switzerland's Bitcoin capital with the Plan ₿ initiative, accepts Bitcoin for taxes and public services.</p>
-                </div>
-            </div>
-        </div>
+            <ul>
+                <li>DeFi protocols: staking, liquidity pools, borrow/lend (conservative strategies)</li>
+                <li>Understanding smart contract risks and how to evaluate protocols</li>
+                <li>Advanced security setups and cold storage solutions</li>
+                <li>Lightning Network and Layer 2 solutions</li>
+                <li>Privacy tools and techniques</li>
+                <li>Technical troubleshooting and implementation support</li>
+            </ul>
+        </div>
 
-        <div class="section">
-            <div class="disclaimer">
-                <h3>⚠️ Important Legal Disclaimer</h3>
-                
-                <p><strong>This is educational content only, not financial, investment, legal, or tax advice.</strong></p>
-                
-                <p>I do not provide investment recommendations, financial planning, portfolio management, trading signals, tax advice, or legal advice. Nothing discussed during consultations constitutes a recommendation to buy, sell, or hold any asset.</p>
-                
-                <p>All investments carry risk. Cryptocurrency and DeFi activities involve significant risks including but not limited to: smart contract vulnerabilities, hacking, loss of funds, regulatory changes, extreme market volatility, and potential total loss of capital.</p>
-                
-                <p><strong>I provide education on HOW these technologies work and HOW to use them safely.</strong> YOU decide WHAT to do based on your own research, risk tolerance, and independent judgment. All decisions and their consequences are entirely your responsibility.</p>
-                
-                <div class="disclaimer-critical">
-                    <p>
-                        <strong>CRITICAL:</strong> I am an educator and technical guide, not a financial advisor, investment advisor, tax professional, or legal counsel for Swiss law matters. For Swiss legal and regulatory matters, I work alongside qualified Swiss legal professionals. You should consult appropriate licensed professionals for financial, investment, tax, and Swiss legal advice.
-                    </p>
-                    <p style="margin-top: 13px; font-size: 12px; opacity: 0.9;">
-                        <strong>Professional Credentials:</strong> Karina Schumacher Bueno is a licensed lawyer (OAB/SP Brazil) and certified mediator & conciliator. My law degree is from Brazil. I do not practice Swiss law. For matters requiring Swiss legal expertise, I coordinate with licensed Swiss legal professionals to ensure full compliance.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div class="note-box">
+            <h4>🔒 Confidentiality & Privacy</h4>
+            <p>All consultations are completely confidential. Your privacy is protected. When needed, I coordinate with qualified professionals (lawyers, accountants) to provide comprehensive support.</p>
+        </div>
+    </div>
 
-        <div class="section">
-            <div class="contact">
-                <h2>Get Started</h2>
-                <p style="font-size: 15px; margin-bottom: 25px;">Ready to take your first steps? Let's talk about YOUR specific situation.</p>
-                <p><strong>Individual Consultation:</strong> From CHF 190</p>
-                <p><strong>Mentorship (3 Sessions):</strong> CHF 450</p>
-                <p><strong>Business Crypto Payment:</strong> From CHF 500</p>
-                <p><strong>Relocation & Real Estate Support:</strong> From CHF 150</p>
-                <p style="font-size: 17px; margin-top: 25px; margin-bottom: 20px; line-height: 2;">
-                    📧 <span class="highlight"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe959f9c8b9b9091d09d96be8e8c918a9190d0939b">[email&#160;protected]</a></span><br>
-                    🐦 <span class="highlight">@kakasbq</span>
-                </p>
-                <p>Consultations via secure video call (Signal, Zoom, WhatsApp, or FaceTime)</p>
-                <p style="margin-top: 15px;">All consultations are <span class="highlight">completely confidential</span>.</p>
-            </div>
-        </div>
+    <div class="section">
+        <h2>Business Consulting</h2>
 
-        <footer>
-            <p>Currently pursuing advanced blockchain education at the University of Nicosia</p>
-            <p style="margin-top: 8px;">Serving individuals and businesses in Switzerland, Brazil, and internationally</p>
-            <p style="margin-top: 13px; font-size
+        <div class="card">
+            <h3 class="card-title">🏢 Business Crypto Payment Adoption</h3>
+            <div class="price">From CHF 500</div>
+            <p class="card-intro">Want to accept Bitcoin payments but don't know where to start? We'll map YOUR business needs and build the right implementation plan.</p>
+
+            <ul>
+                <li>Payment integration strategy: step-by-step roadmap to start accepting Bitcoin/crypto payments safely</li>
+                <li>Payment processor selection: BTCPay Server, Lightning Network, or third-party solutions</li>
+                <li>Point-of-sale solutions: crypto payment terminals and QR code systems</li>
+                <li>E-commerce integration: adding crypto checkout to your online store</li>
+                <li>Marketing to crypto users: reaching the crypto-paying customer segment</li>
+                <li>Risk management: volatility protection and best practices</li>
+                <li>Team training: educating your staff on crypto payments</li>
+            </ul>
+
+            <div class="note-box">
+                <h4>📋 Support & Coordination</h4>
+                <p>I provide technical and strategic guidance on crypto payment systems. For legal, regulatory, and tax matters, I coordinate with qualified Swiss professionals to ensure complete, compliant support.</p>
+            </div>
+
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 18px;">Contact for custom quote based on your business needs.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Relocation & Real Estate Support</h2>
+
+        <div class="card">
+            <h3 class="card-title">🇨🇭 Complete Relocation Support to Switzerland</h3>
+            <div class="price">From CHF 150</div>
+            <p class="card-intro">Moving to Switzerland? As someone who relocated to Switzerland with my husband and 3 kids, I help with YOUR specific situation.</p>
+
+            <ul>
+                <li>Documentation guidance & registration support</li>
+                <li>Professional network: connections with trusted Swiss specialists (lawyers, accountants)</li>
+                <li>Housing search (rental & purchase) with premier agencies</li>
+                <li>Remote property viewing: detailed video tours with honest commentary</li>
+                <li>School search & recommendations for families</li>
+                <li>Banking guidance: crypto-friendly banks and documentation help</li>
+                <li>Complete setup: health insurance, utilities, internet</li>
+                <li>Local orientation: neighborhoods, cost of living, integration tips</li>
+                <li>Ongoing support throughout your transition</li>
+            </ul>
+
+            <p style="color: #cbd5e1; font-size: 14px; font-style: italic; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.05); border-radius: 8px; border-left: 3px solid #F7931A;">
+                <strong>Every relocation is unique.</strong> Contact me with your specific situation, and I'll provide a detailed proposal tailored exactly to what you need.
+            </p>
+
+            <div class="info-box" style="margin-top: 18px;">
+                <h4>🇨🇭 Why Switzerland?</h4>
+                <p>Switzerland offers exceptional quality of life, political stability, and a crypto-friendly regulatory environment. Lugano, known as Switzerland's Bitcoin capital with the Plan ₿ initiative, accepts Bitcoin for taxes and public services.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Stack Smart</h2>
+
+        <div class="card" style="border: 3px solid #22c55e; background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(247, 147, 26, 0.1));">
+            <h3 class="card-title">🎮 Stack Smart - Bitcoin Accumulation App</h3>
+            <div class="price" style="color: #22c55e;">In Development • Beta 2026 • Free for First 500</div>
+            <p class="card-intro"><strong style="color: #22c55e;">📍 Bitcoin Only</strong> • Transform how you see market drops from fear to opportunity.</p>
+
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <p style="color: #cbd5e1; font-size: 14px; line-height: 1.7; margin-bottom: 15px;">
+                    <strong style="color: #ef4444;">The problem:</strong> Most beginners see price drops as just red candles and panic. They buy at emotional tops (FOMO) and freeze during discounts (fear), missing strategic accumulation opportunities.
+                </p>
+                <p style="color: #cbd5e1; font-size: 14px; line-height: 1.7; margin: 0;">
+                    <strong style="color: #22c55e;">The solution:</strong> Stack Smart transforms how you see the market. Instead of fear of drops, you see objective data: percentage discount from ATH, RSI indicators, and probability of accumulation efficiency. Make strategic decisions based on data, not fear.
+                </p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 25px 0;">
+                <span style="display: inline-block; background: rgba(247, 147, 26, 0.2); color: #F7931A; padding: 8px 16px; border-radius: 20px; font-size: 13px;">
+                    🎮 Gamified Experience
+                </span>
+                <span style="display: inline-block; background: rgba(34, 197, 94, 0.2); color: #22c55e; padding: 8px 16px; border-radius: 20px; font-size: 13px;">
+                    📊 Efficiency Score
+                </span>
+                <span style="display: inline-block; background: rgba(247, 147, 26, 0.2); color: #F7931A; padding: 8px 16px; border-radius: 20px; font-size: 13px;">
+                    💎 Bitcoin Only
+                </span>
+                <span style="display: inline-block; background: rgba(34, 197, 94, 0.2); color: #22c55e; padding: 8px 16px; border-radius: 20px; font-size: 13px;">
+                    📈 Data-Driven Decisions
+                </span>
+            </div>
+
+            <p style="color: #94a3b8; font-size: 13px; font-style: italic; text-align: center;">
+                Join the waitlist by mentioning your interest during consultation!
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="disclaimer">
+            <h3>⚠️ Important Legal Disclaimer</h3>
+
+            <p><strong>This is educational content only, not financial, investment, legal, or tax advice.</strong></p>
+
+            <p>I do not provide investment recommendations, financial planning, portfolio management, trading signals, tax advice, or legal advice. Nothing discussed during consultations constitutes a recommendation to buy, sell, or hold any asset.</p>
+
+            <p>All investments carry risk. Cryptocurrency and DeFi activities involve significant risks including but not limited to: smart contract vulnerabilities, hacking, loss of funds, regulatory changes, extreme market volatility, and potential total loss of capital.</p>
+
+            <p><strong>I provide education on HOW these technologies work and HOW to use them safely.</strong> YOU decide WHAT to do based on your own research, risk tolerance, and independent judgment. All decisions and their consequences are entirely your responsibility.</p>
+
+            <div class="disclaimer-critical">
+                <p>
+                    <strong>CRITICAL:</strong> I am an educator and technical guide, not a financial advisor, investment advisor, tax professional, or legal counsel for Swiss law matters. For Swiss legal and regulatory matters, I work alongside qualified Swiss legal professionals. You should consult appropriate licensed professionals for financial, investment, tax, and Swiss legal advice.
+                </p>
+                <p style="margin-top: 13px; font-size: 12px; opacity: 0.9;">
+                    <strong>Professional Credentials:</strong> Karina Schumacher Bueno is a licensed lawyer (OAB/SP Brazil) and certified mediator & conciliator. My law degree is from Brazil. I do not practice Swiss law. For matters requiring Swiss legal expertise, I coordinate with licensed Swiss legal professionals to ensure full compliance.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="contact">
+            <h2>Get Started</h2>
+            <p style="font-size: 15px; margin-bottom: 25px;">Ready to take your first steps? Let's talk about YOUR specific situation.</p>
+            <p><strong>Individual Consultation:</strong> From CHF 190</p>
+            <p><strong>Mentorship (3 Sessions):</strong> CHF 450</p>
+            <p><strong>Business Crypto Payment:</strong> From CHF 500</p>
+            <p><strong>Relocation & Real Estate Support:</strong> From CHF 150</p>
+            <p style="font-size: 17px; margin-top: 25px; margin-bottom: 20px; line-height: 2;">
+                📧 <span class="highlight">kabueno.ch@proton.me</span><br>
+                🐦 <span class="highlight">@kakasbq</span>
+            </p>
+            <p>Consultations via secure video call (Signal, Zoom, WhatsApp, or FaceTime)</p>
+            <p style="margin-top: 15px;">All consultations are <span class="highlight">completely confidential</span>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Currently pursuing advanced blockchain education at the University of Nicosia</p>
+        <p style="margin-top: 8px;">Serving individuals and businesses in Switzerland, Brazil, and internationally</p>
+        <p style="margin-top: 13px; font-size: 11px; opacity: 0.7;">© 2025 Karina Bueno - Bitcoin & Crypto Consulting</p>
+    </footer>
+</div>
+```
+
+</body>
+</html>
