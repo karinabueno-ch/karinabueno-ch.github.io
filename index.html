@@ -1,478 +1,453 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina Bueno - Bitcoin & Crypto Consulting</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(247, 147, 26, 0.2);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(247, 147, 26, 0.3);
+        }
+        h1 {
+            font-size: 38px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            font-size: 15px;
+            color: #F7931A;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .credentials {
+            font-size: 13px;
+            color: #94a3b8;
+            letter-spacing: 0.5px;
+        }
+        .intro {
+            font-size: 17px;
+            color: #cbd5e1;
+            margin: 25px 0 30px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        .emphasis-box {
+            background: linear-gradient(135deg, rgba(247, 147, 26, 0.1), rgba(245, 158, 11, 0.05));
+            border-left: 4px solid #F7931A;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 35px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .about {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(247, 147, 26, 0.2);
+        }
+        .about p {
+            color: #cbd5e1;
+            margin-bottom: 13px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        h2 {
+            font-size: 24px;
+            color: #F7931A;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+            border: 2px solid rgba(247, 147, 26, 0.3);
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #F7931A, #fb923c);
+        }
+        .card-title {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .price {
+            font-size: 32px;
+            color: #F7931A;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        .card-intro {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 18px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        li {
+            color: #cbd5e1;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #F7931A;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .info-box {
+            background: rgba(247, 147, 26, 0.1);
+            border: 1px solid rgba(247, 147, 26, 0.3);
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .info-box h4 {
+            color: #F7931A;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .info-box ul {
+            margin-bottom: 0;
+        }
+        .info-box li {
+            font-size: 13px;
+            padding: 5px 0;
+        }
+        .info-box p {
+            color: #cbd5e1;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .note-box {
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 18px;
+        }
+        .note-box h4 {
+            color: #60a5fa;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .note-box p {
+            color: #cbd5e1;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .disclaimer {
+            background: rgba(239, 68, 68, 0.08);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+        .disclaimer h3 {
+            color: #fca5a5;
+            font-size: 20px;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .disclaimer p {
+            color: #fca5a5;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 13px;
+        }
+        .disclaimer-critical {
+            background: rgba(239, 68, 68, 0.15);
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
+            margin-top: 18px;
+        }
+        .disclaimer-critical p {
+            margin-bottom: 0;
+        }
+        .contact {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(37, 99, 235, 0.08));
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .contact h2 {
+            color: #60a5fa;
+            margin-bottom: 18px;
+        }
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        .highlight {
+            color: #F7931A;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(247, 147, 26, 0.2);
+            color: #64748b;
+            font-size: 12px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 20px; }
+            h1 { font-size: 28px; }
+            .price { font-size: 26px; }
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;title&gt;Karina Bueno - Bitcoin &amp; Crypto Consulting&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;style&gt;</span></p>
-<p class="p1"><span class="s1">        * { margin: 0; padding: 0; box-sizing: border-box; }</span></p>
-<p class="p1"><span class="s1">        body {</span></p>
-<p class="p1"><span class="s1">            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span></p>
-<p class="p1"><span class="s1">            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);</span></p>
-<p class="p1"><span class="s1">            color: #e2e8f0;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.6;</span></p>
-<p class="p1"><span class="s1">            padding: 30px 15px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .container {</span></p>
-<p class="p1"><span class="s1">            max-width: 900px;</span></p>
-<p class="p1"><span class="s1">            margin: 0 auto;</span></p>
-<p class="p1"><span class="s1">            background: rgba(30, 41, 59, 0.6);</span></p>
-<p class="p1"><span class="s1">            backdrop-filter: blur(10px);</span></p>
-<p class="p1"><span class="s1">            border-radius: 20px;</span></p>
-<p class="p1"><span class="s1">            padding: 40px 30px;</span></p>
-<p class="p1"><span class="s1">            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);</span></p>
-<p class="p1"><span class="s1">            border: 1px solid rgba(247, 147, 26, 0.2);</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        header {</span></p>
-<p class="p1"><span class="s1">            text-align: center;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 40px;</span></p>
-<p class="p1"><span class="s1">            padding-bottom: 25px;</span></p>
-<p class="p1"><span class="s1">            border-bottom: 2px solid rgba(247, 147, 26, 0.3);</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        h1 {</span></p>
-<p class="p1"><span class="s1">            font-size: 38px;</span></p>
-<p class="p1"><span class="s1">            font-weight: 300;</span></p>
-<p class="p1"><span class="s1">            letter-spacing: 3px;</span></p>
-<p class="p1"><span class="s1">            color: #ffffff;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 8px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .tagline {</span></p>
-<p class="p1"><span class="s1">            font-size: 15px;</span></p>
-<p class="p1"><span class="s1">            color: #F7931A;</span></p>
-<p class="p1"><span class="s1">            letter-spacing: 2px;</span></p>
-<p class="p1"><span class="s1">            text-transform: uppercase;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 12px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .credentials {</span></p>
-<p class="p1"><span class="s1">            font-size: 13px;</span></p>
-<p class="p1"><span class="s1">            color: #94a3b8;</span></p>
-<p class="p1"><span class="s1">            letter-spacing: 0.5px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .intro {</span></p>
-<p class="p1"><span class="s1">            font-size: 17px;</span></p>
-<p class="p1"><span class="s1">            color: #cbd5e1;</span></p>
-<p class="p1"><span class="s1">            margin: 25px 0 30px;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.8;</span></p>
-<p class="p1"><span class="s1">            text-align: center;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .emphasis-box {</span></p>
-<p class="p1"><span class="s1">            background: linear-gradient(135deg, rgba(247, 147, 26, 0.1), rgba(245, 158, 11, 0.05));</span></p>
-<p class="p1"><span class="s1">            border-left: 4px solid #F7931A;</span></p>
-<p class="p1"><span class="s1">            padding: 20px;</span></p>
-<p class="p1"><span class="s1">            border-radius: 8px;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 35px;</span></p>
-<p class="p1"><span class="s1">            font-size: 15px;</span></p>
-<p class="p1"><span class="s1">            text-align: center;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .section {</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 35px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .about {</span></p>
-<p class="p1"><span class="s1">            background: rgba(15, 23, 42, 0.5);</span></p>
-<p class="p1"><span class="s1">            padding: 25px;</span></p>
-<p class="p1"><span class="s1">            border-radius: 12px;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 25px;</span></p>
-<p class="p1"><span class="s1">            border: 1px solid rgba(247, 147, 26, 0.2);</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .about p {</span></p>
-<p class="p1"><span class="s1">            color: #cbd5e1;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 13px;</span></p>
-<p class="p1"><span class="s1">            font-size: 14px;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.7;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        h2 {</span></p>
-<p class="p1"><span class="s1">            font-size: 24px;</span></p>
-<p class="p1"><span class="s1">            color: #F7931A;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 20px;</span></p>
-<p class="p1"><span class="s1">            font-weight: 400;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .card {</span></p>
-<p class="p1"><span class="s1">            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));</span></p>
-<p class="p1"><span class="s1">            border: 2px solid rgba(247, 147, 26, 0.3);</span></p>
-<p class="p1"><span class="s1">            border-radius: 14px;</span></p>
-<p class="p1"><span class="s1">            padding: 28px;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 25px;</span></p>
-<p class="p1"><span class="s1">            position: relative;</span></p>
-<p class="p1"><span class="s1">            overflow: hidden;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .card::before {</span></p>
-<p class="p1"><span class="s1">            content: '';</span></p>
-<p class="p1"><span class="s1">            position: absolute;</span></p>
-<p class="p1"><span class="s1">            top: 0;</span></p>
-<p class="p1"><span class="s1">            left: 0;</span></p>
-<p class="p1"><span class="s1">            right: 0;</span></p>
-<p class="p1"><span class="s1">            height: 3px;</span></p>
-<p class="p1"><span class="s1">            background: linear-gradient(90deg, #F7931A, #fb923c);</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .card-title {</span></p>
-<p class="p1"><span class="s1">            font-size: 22px;</span></p>
-<p class="p1"><span class="s1">            color: #ffffff;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 10px;</span></p>
-<p class="p1"><span class="s1">            font-weight: 500;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .price {</span></p>
-<p class="p1"><span class="s1">            font-size: 32px;</span></p>
-<p class="p1"><span class="s1">            color: #F7931A;</span></p>
-<p class="p1"><span class="s1">            font-weight: 600;</span></p>
-<p class="p1"><span class="s1">            margin: 15px 0;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .card-intro {</span></p>
-<p class="p1"><span class="s1">            font-size: 14px;</span></p>
-<p class="p1"><span class="s1">            color: #cbd5e1;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 18px;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.6;</span></p>
-<p class="p1"><span class="s1">            font-style: italic;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        ul {</span></p>
-<p class="p1"><span class="s1">            list-style: none;</span></p>
-<p class="p1"><span class="s1">            padding: 0;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 20px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        li {</span></p>
-<p class="p1"><span class="s1">            color: #cbd5e1;</span></p>
-<p class="p1"><span class="s1">            padding: 8px 0;</span></p>
-<p class="p1"><span class="s1">            padding-left: 28px;</span></p>
-<p class="p1"><span class="s1">            position: relative;</span></p>
-<p class="p1"><span class="s1">            font-size: 14px;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.6;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        li:before {</span></p>
-<p class="p1"><span class="s1">            content: "✓";</span></p>
-<p class="p1"><span class="s1">            position: absolute;</span></p>
-<p class="p1"><span class="s1">            left: 0;</span></p>
-<p class="p1"><span class="s1">            color: #F7931A;</span></p>
-<p class="p1"><span class="s1">            font-weight: bold;</span></p>
-<p class="p1"><span class="s1">            font-size: 16px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .info-box {</span></p>
-<p class="p1"><span class="s1">            background: rgba(247, 147, 26, 0.1);</span></p>
-<p class="p1"><span class="s1">            border: 1px solid rgba(247, 147, 26, 0.3);</span></p>
-<p class="p1"><span class="s1">            padding: 18px;</span></p>
-<p class="p1"><span class="s1">            border-radius: 8px;</span></p>
-<p class="p1"><span class="s1">            margin-top: 20px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .info-box h4 {</span></p>
-<p class="p1"><span class="s1">            color: #F7931A;</span></p>
-<p class="p1"><span class="s1">            font-size: 14px;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 10px;</span></p>
-<p class="p1"><span class="s1">            font-weight: 500;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .info-box ul {</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 0;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .info-box li {</span></p>
-<p class="p1"><span class="s1">            font-size: 13px;</span></p>
-<p class="p1"><span class="s1">            padding: 5px 0;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .info-box p {</span></p>
-<p class="p1"><span class="s1">            color: #cbd5e1;</span></p>
-<p class="p1"><span class="s1">            font-size: 13px;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.6;</span></p>
-<p class="p1"><span class="s1">            margin: 0;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .note-box {</span></p>
-<p class="p1"><span class="s1">            background: rgba(96, 165, 250, 0.1);</span></p>
-<p class="p1"><span class="s1">            border: 1px solid rgba(96, 165, 250, 0.3);</span></p>
-<p class="p1"><span class="s1">            padding: 18px;</span></p>
-<p class="p1"><span class="s1">            border-radius: 8px;</span></p>
-<p class="p1"><span class="s1">            margin-top: 18px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .note-box h4 {</span></p>
-<p class="p1"><span class="s1">            color: #60a5fa;</span></p>
-<p class="p1"><span class="s1">            font-size: 14px;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 8px;</span></p>
-<p class="p1"><span class="s1">            font-weight: 500;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .note-box p {</span></p>
-<p class="p1"><span class="s1">            color: #cbd5e1;</span></p>
-<p class="p1"><span class="s1">            font-size: 13px;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.6;</span></p>
-<p class="p1"><span class="s1">            margin: 0;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .disclaimer {</span></p>
-<p class="p1"><span class="s1">            background: rgba(239, 68, 68, 0.08);</span></p>
-<p class="p1"><span class="s1">            border: 2px solid rgba(239, 68, 68, 0.3);</span></p>
-<p class="p1"><span class="s1">            padding: 28px;</span></p>
-<p class="p1"><span class="s1">            border-radius: 12px;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 25px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .disclaimer h3 {</span></p>
-<p class="p1"><span class="s1">            color: #fca5a5;</span></p>
-<p class="p1"><span class="s1">            font-size: 20px;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 18px;</span></p>
-<p class="p1"><span class="s1">            text-align: center;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .disclaimer p {</span></p>
-<p class="p1"><span class="s1">            color: #fca5a5;</span></p>
-<p class="p1"><span class="s1">            font-size: 13px;</span></p>
-<p class="p1"><span class="s1">            line-height: 1.7;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 13px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .disclaimer-critical {</span></p>
-<p class="p1"><span class="s1">            background: rgba(239, 68, 68, 0.15);</span></p>
-<p class="p1"><span class="s1">            padding: 18px;</span></p>
-<p class="p1"><span class="s1">            border-radius: 8px;</span></p>
-<p class="p1"><span class="s1">            border-left: 4px solid #ef4444;</span></p>
-<p class="p1"><span class="s1">            margin-top: 18px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .disclaimer-critical p {</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 0;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .contact {</span></p>
-<p class="p1"><span class="s1">            background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(37, 99, 235, 0.08));</span></p>
-<p class="p1"><span class="s1">            padding: 30px;</span></p>
-<p class="p1"><span class="s1">            border-radius: 12px;</span></p>
-<p class="p1"><span class="s1">            text-align: center;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .contact h2 {</span></p>
-<p class="p1"><span class="s1">            color: #60a5fa;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 18px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .contact p {</span></p>
-<p class="p1"><span class="s1">            color: #cbd5e1;</span></p>
-<p class="p1"><span class="s1">            margin-bottom: 12px;</span></p>
-<p class="p1"><span class="s1">            font-size: 14px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        .highlight {</span></p>
-<p class="p1"><span class="s1">            color: #F7931A;</span></p>
-<p class="p1"><span class="s1">            font-weight: 500;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        footer {</span></p>
-<p class="p1"><span class="s1">            text-align: center;</span></p>
-<p class="p1"><span class="s1">            margin-top: 40px;</span></p>
-<p class="p1"><span class="s1">            padding-top: 25px;</span></p>
-<p class="p1"><span class="s1">            border-top: 1px solid rgba(247, 147, 26, 0.2);</span></p>
-<p class="p1"><span class="s1">            color: #64748b;</span></p>
-<p class="p1"><span class="s1">            font-size: 12px;</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">        @media (max-width: 768px) {</span></p>
-<p class="p1"><span class="s1">            .container { padding: 25px 20px; }</span></p>
-<p class="p1"><span class="s1">            h1 { font-size: 28px; }</span></p>
-<p class="p1"><span class="s1">            .price { font-size: 26px; }</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">    &lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;header&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h1&gt;KARINA BUENO&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;div class="tagline"&gt;Bitcoin &amp; Crypto Consulting&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;div class="credentials"&gt;Lawyer • Mediator • Bitcoin Educator&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">```</span></p>
-<p class="p1"><span class="s1">    &lt;div class="intro"&gt;</span></p>
-<p class="p1"><span class="s1">        I help crypto investors and businesses with &lt;strong&gt;personalized solutions&lt;/strong&gt;. Not generic courses.</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;div class="emphasis-box"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;strong&gt;Not courses. Not scripts.&lt;/strong&gt;&lt;br&gt;</span></p>
-<p class="p1"><span class="s1">        YOUR situation. YOUR solution. YOUR pace.&lt;br&gt;&lt;br&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;span style="color: #F7931A; font-size: 16px;"&gt;🎯 Primary Focus: Bitcoin&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;div class="about"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;&lt;strong&gt;My background combines:&lt;/strong&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;⚖️ &lt;strong&gt;Lawyer (BR - OAB/SP):&lt;/strong&gt; Licensed to practice law in Brazil with expertise in clarity, legal structure, and confidentiality. For matters involving Swiss law, I work alongside qualified Swiss legal professionals to ensure full compliance and expert guidance.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;🤝 &lt;strong&gt;Mediator &amp; Conciliator:&lt;/strong&gt; Specialized in active listening, conflict resolution, and guiding people toward practical solutions tailored to their unique situations.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;💎 &lt;strong&gt;Bitcoin educator &amp; investor:&lt;/strong&gt; I've tested different protocols and strategies hands-on, learning what works and where the real risks are.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p style="margin-top: 13px;"&gt;&lt;strong&gt;My approach:&lt;/strong&gt; As a trained mediator and lawyer, I listen first. What's YOUR specific challenge? What have you tried? What are you afraid of? Then we build a personalized solution together.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;h2&gt;Bitcoin &amp; Crypto Consulting&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1">        </span></p>
-<p class="p1"><span class="s1">        &lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h3 class="card-title"&gt;💎 Individual Consultation&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;div class="price"&gt;From CHF 190&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p class="card-intro"&gt;&lt;strong style="color: #F7931A;"&gt;Primary focus: Bitcoin&lt;/strong&gt; • Starting from zero? Stuck after courses? Specific question or need complete guidance?&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;div class="info-box"&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;h4&gt;📋 Most Common Topics:&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;ul&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Wallet setup (hot &amp; cold wallets)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Withdrawing from exchanges safely&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Security best practices (seed phrases, backups)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Bitcoin fundamentals &amp; philosophy&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;DCA strategies &amp; accumulation planning&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Multi-sig &amp; inheritance planning&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Understanding crypto beyond Bitcoin (altcoins, DeFi basics)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">            &lt;p style="color: #94a3b8; font-size: 13px; font-style: italic; margin-top: 18px;"&gt;</span></p>
-<p class="p1"><span class="s1">                These are examples. Your consultation will be customized to address what matters most to YOU.</span></p>
-<p class="p1"><span class="s1">            &lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">        &lt;div class="card" style="border: 3px solid #F7931A; background: linear-gradient(135deg, rgba(247, 147, 26, 0.15), rgba(15, 23, 42, 0.8));"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h3 class="card-title"&gt;💼 Mentorship Program (3 Sessions)&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;div class="price"&gt;CHF 450&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p class="card-intro"&gt;&lt;strong style="color: #F7931A;"&gt;Complete guidance from start to implementation&lt;/strong&gt; • Perfect for those who want comprehensive, hands-on support with accountability.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;div class="info-box"&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;h4&gt;📅 What's Included:&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;ul&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;&lt;strong&gt;Session 1:&lt;/strong&gt; Assessment, goal setting, and personalized action plan&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;&lt;strong&gt;Session 2:&lt;/strong&gt; Implementation support, troubleshooting, and progress review&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;&lt;strong&gt;Session 3:&lt;/strong&gt; Final review, advanced topics, and long-term strategy&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Customized PDF guide delivered after first session&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Message support between sessions via Signal&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;li&gt;Flexible scheduling over 4-8 weeks&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">            &lt;p style="color: #cbd5e1; font-size: 13px; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.1); border-radius: 8px;"&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;strong&gt;Best for:&lt;/strong&gt; Complete beginners wanting structured guidance, or intermediate users tackling complex setups (multi-sig, inheritance planning, business implementation).</span></p>
-<p class="p1"><span class="s1">            &lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">        &lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h3 class="card-title"&gt;Follow-up or Advanced Topics&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;div class="price"&gt;CHF 120/hour&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p class="card-intro"&gt;For additional support, implementation questions, or exploring more advanced topics:&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;ul&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;DeFi protocols: staking, liquidity pools, borrow/lend (conservative strategies)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Understanding smart contract risks and how to evaluate protocols&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Advanced security setups and cold storage solutions&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Lightning Network and Layer 2 solutions&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Privacy tools and techniques&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Technical troubleshooting and implementation support&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">        &lt;div class="note-box"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h4&gt;🔒 Confidentiality &amp; Privacy&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;All consultations are completely confidential. Your privacy is protected. When needed, I coordinate with qualified professionals (lawyers, accountants) to provide comprehensive support.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;h2&gt;Business Consulting&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1">        </span></p>
-<p class="p1"><span class="s1">        &lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h3 class="card-title"&gt;🏢 Business Crypto Payment Adoption&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;div class="price"&gt;From CHF 500&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p class="card-intro"&gt;Want to accept Bitcoin payments but don't know where to start? We'll map YOUR business needs and build the right implementation plan.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;ul&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Payment integration strategy: step-by-step roadmap to start accepting Bitcoin/crypto payments safely&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Payment processor selection: BTCPay Server, Lightning Network, or third-party solutions&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Point-of-sale solutions: crypto payment terminals and QR code systems&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;E-commerce integration: adding crypto checkout to your online store&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Marketing to crypto users: reaching the crypto-paying customer segment&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Risk management: volatility protection and best practices&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Team training: educating your staff on crypto payments&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;div class="note-box"&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;h4&gt;📋 Support &amp; Coordination&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;p&gt;I provide technical and strategic guidance on crypto payment systems. For legal, regulatory, and tax matters, I coordinate with qualified Swiss professionals to ensure complete, compliant support.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;p style="color: #94a3b8; font-size: 13px; margin-top: 18px;"&gt;Contact for custom quote based on your business needs.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;h2&gt;Relocation &amp; Real Estate Support&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1">        </span></p>
-<p class="p1"><span class="s1">        &lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h3 class="card-title"&gt;🇨🇭 Complete Relocation Support to Switzerland&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;div class="price"&gt;From CHF 150&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p class="card-intro"&gt;Moving to Switzerland's Bitcoin capital? As someone who relocated to Switzerland with my husband and 3 kids, I help with YOUR specific situation.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;ul&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Documentation guidance &amp; registration support&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Professional network: connections with trusted Swiss specialists (lawyers, accountants)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Housing search (rental &amp; purchase) with premier agencies&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Remote property viewing: detailed video tours with honest commentary&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;School search &amp; recommendations for families&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Banking guidance: crypto-friendly banks and documentation help&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Complete setup: health insurance, utilities, internet&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Local orientation: neighborhoods, cost of living, integration tips&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;li&gt;Ongoing support throughout your transition&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;p style="color: #cbd5e1; font-size: 14px; font-style: italic; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.05); border-radius: 8px; border-left: 3px solid #F7931A;"&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;strong&gt;Every relocation is unique.&lt;/strong&gt; Contact me with your specific situation, and I'll provide a detailed proposal tailored exactly to what you need.</span></p>
-<p class="p1"><span class="s1">            &lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">            &lt;div class="info-box" style="margin-top: 18px;"&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;h4&gt;🇨🇭 Why Switzerland?&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;p&gt;Switzerland offers exceptional quality of life, political stability, and a crypto-friendly regulatory environment. Lugano, known as Switzerland's Bitcoin capital with the Plan ₿ initiative, accepts Bitcoin for taxes and public services.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;div class="disclaimer"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h3&gt;⚠️ Important Legal Disclaimer&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;&lt;strong&gt;This is educational content only, not financial, investment, legal, or tax advice.&lt;/strong&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;I do not provide investment recommendations, financial planning, portfolio management, trading signals, tax advice, or legal advice. Nothing discussed during consultations constitutes a recommendation to buy, sell, or hold any asset.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;All investments carry risk. Cryptocurrency and DeFi activities involve significant risks including but not limited to: smart contract vulnerabilities, hacking, loss of funds, regulatory changes, extreme market volatility, and potential total loss of capital.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;&lt;strong&gt;I provide education on HOW these technologies work and HOW to use them safely.&lt;/strong&gt; YOU decide WHAT to do based on your own research, risk tolerance, and independent judgment. All decisions and their consequences are entirely your responsibility.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            </span></p>
-<p class="p1"><span class="s1">            &lt;div class="disclaimer-critical"&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;p&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;strong&gt;CRITICAL:&lt;/strong&gt; I am an educator and technical guide, not a financial advisor, investment advisor, tax professional, or legal counsel for Swiss law matters. For Swiss legal and regulatory matters, I work alongside qualified Swiss legal professionals. You should consult appropriate licensed professionals for financial, investment, tax, and Swiss legal advice.</span></p>
-<p class="p1"><span class="s1">                &lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">                &lt;p style="margin-top: 13px; font-size: 12px; opacity: 0.9;"&gt;</span></p>
-<p class="p1"><span class="s1">                    &lt;strong&gt;Professional Credentials:&lt;/strong&gt; Karina Schumacher Bueno is a licensed lawyer (OAB/SP Brazil) and certified mediator &amp; conciliator. My law degree is from Brazil. I do not practice Swiss law. For matters requiring Swiss legal expertise, I coordinate with licensed Swiss legal professionals to ensure full compliance.</span></p>
-<p class="p1"><span class="s1">                &lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;div class="contact"&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;h2&gt;Get Started&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p style="font-size: 15px; margin-bottom: 25px;"&gt;Ready to take your first steps? Let's talk about YOUR specific situation.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;&lt;strong&gt;Individual Consultation:&lt;/strong&gt; From CHF 190&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;&lt;strong&gt;Mentorship (3 Sessions):&lt;/strong&gt; CHF 450&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;&lt;strong&gt;Business Crypto Payment:&lt;/strong&gt; From CHF 500&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;&lt;strong&gt;Relocation &amp; Real Estate Support:&lt;/strong&gt; From CHF 150&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p style="font-size: 17px; margin-top: 25px; margin-bottom: 20px; line-height: 2;"&gt;</span></p>
-<p class="p1"><span class="s1">                📧 &lt;span class="highlight"&gt;kabueno.ch@proton.me&lt;/span&gt;&lt;br&gt;</span></p>
-<p class="p1"><span class="s1">                🐦 &lt;span class="highlight"&gt;@kakasbq&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p&gt;Consultations via secure video call (Signal, Zoom, WhatsApp, or FaceTime)&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;p style="margin-top: 15px;"&gt;All consultations are &lt;span class="highlight"&gt;completely confidential&lt;/span&gt;.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">    &lt;footer&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;p&gt;Currently pursuing advanced blockchain education at the University of Nicosia&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;p style="margin-top: 8px;"&gt;Serving individuals and businesses in Switzerland, Brazil, and internationally&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;p style="margin-top: 13px; font-size: 11px; opacity: 0.7;"&gt;© 2025 Karina Bueno - Bitcoin &amp; Crypto Consulting&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/footer&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">```</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-</body>
-</html>
+    <div class="container">
+        <header>
+            <h1>KARINA BUENO</h1>
+            <div class="tagline">Bitcoin & Crypto Consulting</div>
+            <div class="credentials">Lawyer • Mediator • Bitcoin Educator</div>
+        </header>
+
+        <div class="intro">
+            I help crypto investors and businesses with <strong>personalized solutions</strong>. Not generic courses.
+        </div>
+
+        <div class="emphasis-box">
+            <strong>Not courses. Not scripts.</strong><br>
+            YOUR situation. YOUR solution. YOUR pace.<br><br>
+            <span style="color: #F7931A; font-size: 16px;">🎯 Primary Focus: Bitcoin</span>
+        </div>
+
+        <div class="section">
+            <div class="about">
+                <p><strong>My background combines:</strong></p>
+                <p>⚖️ <strong>Lawyer (BR - OAB/SP):</strong> Licensed to practice law in Brazil with expertise in clarity, legal structure, and confidentiality. For matters involving Swiss law, I work alongside qualified Swiss legal professionals to ensure full compliance and expert guidance.</p>
+                <p>🤝 <strong>Mediator & Conciliator:</strong> Specialized in active listening, conflict resolution, and guiding people toward practical solutions tailored to their unique situations.</p>
+                <p>💎 <strong>Bitcoin educator & investor:</strong> I've tested different protocols and strategies hands-on, learning what works and where the real risks are.</p>
+                <p style="margin-top: 13px;"><strong>My approach:</strong> As a trained mediator and lawyer, I listen first. What's YOUR specific challenge? What have you tried? What are you afraid of? Then we build a personalized solution together.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Bitcoin & Crypto Consulting</h2>
+            
+            <div class="card">
+                <h3 class="card-title">💎 Individual Consultation</h3>
+                <div class="price">From CHF 190</div>
+                <p class="card-intro"><strong style="color: #F7931A;">Primary focus: Bitcoin</strong> • Starting from zero? Stuck after courses? Specific question or need complete guidance?</p>
+                
+                <div class="info-box">
+                    <h4>📋 Most Common Topics:</h4>
+                    <ul>
+                        <li>Wallet setup (hot & cold wallets)</li>
+                        <li>Withdrawing from exchanges safely</li>
+                        <li>Security best practices (seed phrases, backups)</li>
+                        <li>Bitcoin fundamentals & philosophy</li>
+                        <li>DCA strategies & accumulation planning</li>
+                        <li>Multi-sig & inheritance planning</li>
+                        <li>Understanding crypto beyond Bitcoin (altcoins, DeFi basics)</li>
+                    </ul>
+                </div>
+
+                <p style="color: #94a3b8; font-size: 13px; font-style: italic; margin-top: 18px;">
+                    These are examples. Your consultation will be customized to address what matters most to YOU.
+                </p>
+            </div>
+
+            <div class="card" style="border: 3px solid #F7931A; background: linear-gradient(135deg, rgba(247, 147, 26, 0.15), rgba(15, 23, 42, 0.8));">
+                <h3 class="card-title">💼 Mentorship Program (3 Sessions)</h3>
+                <div class="price">CHF 450</div>
+                <p class="card-intro"><strong style="color: #F7931A;">Complete guidance from start to implementation</strong> • Perfect for those who want comprehensive, hands-on support with accountability.</p>
+                
+                <div class="info-box">
+                    <h4>📅 What's Included:</h4>
+                    <ul>
+                        <li><strong>Session 1:</strong> Assessment, goal setting, and personalized action plan</li>
+                        <li><strong>Session 2:</strong> Implementation support, troubleshooting, and progress review</li>
+                        <li><strong>Session 3:</strong> Final review, advanced topics, and long-term strategy</li>
+                        <li>Customized PDF guide delivered after first session</li>
+                        <li>Message support between sessions via Signal</li>
+                        <li>Flexible scheduling over 4-8 weeks</li>
+                    </ul>
+                </div>
+
+                <p style="color: #cbd5e1; font-size: 13px; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.1); border-radius: 8px;">
+                    <strong>Best for:</strong> Complete beginners wanting structured guidance, or intermediate users tackling complex setups (multi-sig, inheritance planning, business implementation).
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Follow-up or Advanced Topics</h3>
+                <div class="price">CHF 120/hour</div>
+                <p class="card-intro">For additional support, implementation questions, or exploring more advanced topics:</p>
+                
+                <ul>
+                    <li>DeFi protocols: staking, liquidity pools, borrow/lend (conservative strategies)</li>
+                    <li>Understanding smart contract risks and how to evaluate protocols</li>
+                    <li>Advanced security setups and cold storage solutions</li>
+                    <li>Lightning Network and Layer 2 solutions</li>
+                    <li>Privacy tools and techniques</li>
+                    <li>Technical troubleshooting and implementation support</li>
+                </ul>
+            </div>
+
+            <div class="note-box">
+                <h4>🔒 Confidentiality & Privacy</h4>
+                <p>All consultations are completely confidential. Your privacy is protected. When needed, I coordinate with qualified professionals (lawyers, accountants) to provide comprehensive support.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Business Consulting</h2>
+            
+            <div class="card">
+                <h3 class="card-title">🏢 Business Crypto Payment Adoption</h3>
+                <div class="price">From CHF 500</div>
+                <p class="card-intro">Want to accept Bitcoin payments but don't know where to start? We'll map YOUR business needs and build the right implementation plan.</p>
+                
+                <ul>
+                    <li>Payment integration strategy: step-by-step roadmap to start accepting Bitcoin/crypto payments safely</li>
+                    <li>Payment processor selection: BTCPay Server, Lightning Network, or third-party solutions</li>
+                    <li>Point-of-sale solutions: crypto payment terminals and QR code systems</li>
+                    <li>E-commerce integration: adding crypto checkout to your online store</li>
+                    <li>Marketing to crypto users: reaching the crypto-paying customer segment</li>
+                    <li>Risk management: volatility protection and best practices</li>
+                    <li>Team training: educating your staff on crypto payments</li>
+                </ul>
+                
+                <div class="note-box">
+                    <h4>📋 Support & Coordination</h4>
+                    <p>I provide technical and strategic guidance on crypto payment systems. For legal, regulatory, and tax matters, I coordinate with qualified Swiss professionals to ensure complete, compliant support.</p>
+                </div>
+                
+                <p style="color: #94a3b8; font-size: 13px; margin-top: 18px;">Contact for custom quote based on your business needs.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Relocation & Real Estate Support</h2>
+            
+            <div class="card">
+                <h3 class="card-title">🇨🇭 Complete Relocation Support to Switzerland</h3>
+                <div class="price">From CHF 150</div>
+                <p class="card-intro">Moving to Switzerland's Bitcoin capital? As someone who relocated to Switzerland with my husband and 3 kids, I help with YOUR specific situation.</p>
+                
+                <ul>
+                    <li>Documentation guidance & registration support</li>
+                    <li>Professional network: connections with trusted Swiss specialists (lawyers, accountants)</li>
+                    <li>Housing search (rental & purchase) with premier agencies</li>
+                    <li>Remote property viewing: detailed video tours with honest commentary</li>
+                    <li>School search & recommendations for families</li>
+                    <li>Banking guidance: crypto-friendly banks and documentation help</li>
+                    <li>Complete setup: health insurance, utilities, internet</li>
+                    <li>Local orientation: neighborhoods, cost of living, integration tips</li>
+                    <li>Ongoing support throughout your transition</li>
+                </ul>
+                
+                <p style="color: #cbd5e1; font-size: 14px; font-style: italic; margin-top: 18px; padding: 15px; background: rgba(247, 147, 26, 0.05); border-radius: 8px; border-left: 3px solid #F7931A;">
+                    <strong>Every relocation is unique.</strong> Contact me with your specific situation, and I'll provide a detailed proposal tailored exactly to what you need.
+                </p>
+
+                <div class="info-box" style="margin-top: 18px;">
+                    <h4>🇨🇭 Why Switzerland?</h4>
+                    <p>Switzerland offers exceptional quality of life, political stability, and a crypto-friendly regulatory environment. Lugano, known as Switzerland's Bitcoin capital with the Plan ₿ initiative, accepts Bitcoin for taxes and public services.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="disclaimer">
+                <h3>⚠️ Important Legal Disclaimer</h3>
+                
+                <p><strong>This is educational content only, not financial, investment, legal, or tax advice.</strong></p>
+                
+                <p>I do not provide investment recommendations, financial planning, portfolio management, trading signals, tax advice, or legal advice. Nothing discussed during consultations constitutes a recommendation to buy, sell, or hold any asset.</p>
+                
+                <p>All investments carry risk. Cryptocurrency and DeFi activities involve significant risks including but not limited to: smart contract vulnerabilities, hacking, loss of funds, regulatory changes, extreme market volatility, and potential total loss of capital.</p>
+                
+                <p><strong>I provide education on HOW these technologies work and HOW to use them safely.</strong> YOU decide WHAT to do based on your own research, risk tolerance, and independent judgment. All decisions and their consequences are entirely your responsibility.</p>
+                
+                <div class="disclaimer-critical">
+                    <p>
+                        <strong>CRITICAL:</strong> I am an educator and technical guide, not a financial advisor, investment advisor, tax professional, or legal counsel for Swiss law matters. For Swiss legal and regulatory matters, I work alongside qualified Swiss legal professionals. You should consult appropriate licensed professionals for financial, investment, tax, and Swiss legal advice.
+                    </p>
+                    <p style="margin-top: 13px; font-size: 12px; opacity: 0.9;">
+                        <strong>Professional Credentials:</strong> Karina Schumacher Bueno is a licensed lawyer (OAB/SP Brazil) and certified mediator & conciliator. My law degree is from Brazil. I do not practice Swiss law. For matters requiring Swiss legal expertise, I coordinate with licensed Swiss legal professionals to ensure full compliance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="contact">
+                <h2>Get Started</h2>
+                <p style="font-size: 15px; margin-bottom: 25px;">Ready to take your first steps? Let's talk about YOUR specific situation.</p>
+                <p><strong>Individual Consultation:</strong> From CHF 190</p>
+                <p><strong>Mentorship (3 Sessions):</strong> CHF 450</p>
+                <p><strong>Business Crypto Payment:</strong> From CHF 500</p>
+                <p><strong>Relocation & Real Estate Support:</strong> From CHF 150</p>
+                <p style="font-size: 17px; margin-top: 25px; margin-bottom: 20px; line-height: 2;">
+                    📧 <span class="highlight"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe959f9c8b9b9091d09d96be8e8c918a9190d0939b">[email&#160;protected]</a></span><br>
+                    🐦 <span class="highlight">@kakasbq</span>
+                </p>
+                <p>Consultations via secure video call (Signal, Zoom, WhatsApp, or FaceTime)</p>
+                <p style="margin-top: 15px;">All consultations are <span class="highlight">completely confidential</span>.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Currently pursuing advanced blockchain education at the University of Nicosia</p>
+            <p style="margin-top: 8px;">Serving individuals and businesses in Switzerland, Brazil, and internationally</p>
+            <p style="margin-top: 13px; font-size
