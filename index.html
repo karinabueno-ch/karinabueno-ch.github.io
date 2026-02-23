@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina Bueno - Bitcoin & Digital Assets Consulting</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e3edf7 100%);
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 22px;
+            color: #f59e0b;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #cbd5e1;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Intro Box */
+        .intro-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 60px;
+            border: 2px solid #e0e7ff;
+        }
+
+        .intro-box h2 {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .intro-box p {
+            font-size: 18px;
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about {
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-left: 6px solid #0f172a;
+        }
+
+        .about h3 {
+            font-size: 26px;
+            color: #0f172a;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about p {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Services Section */
+        h2.section-title {
+            font-size: 36px;
+            color: #0f172a;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        /* Topics Box - Shared */
+        .shared-topics {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 3px solid #e0e7ff;
+            margin-bottom: 50px;
+        }
+
+        .shared-topics h3 {
+            font-size: 28px;
+            color: #0f172a;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .shared-topics p.subtitle-text {
+            text-align: center;
+            color: #64748b;
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            padding: 18px 22px;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .topic-item strong {
+            color: #0f172a;
+            font-size: 15px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .topic-item span {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Service Cards */
+        .service-formats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .format-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fef3c7 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 3px solid #fbbf24;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .format-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(251, 191, 36, 0.25);
+        }
+
+        .format-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #f59e0b 0%, #fb923c 100%);
+        }
+
+        .format-card h3 {
+            font-size: 26px;
+            color: #0f172a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .format-card p {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .format-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .format-card li {
+            color: #475569;
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .format-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #f59e0b;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Business & Relocation Cards */
+        .additional-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .additional-card {
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 3px solid #0ea5e9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .additional-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+        }
+
+        .additional-card h3 {
+            font-size: 26px;
+            color: #0f172a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .additional-card p {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .additional-card ul li {
+            color: #475569;
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .additional-card ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #0ea5e9;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Stack Smart */
+        .stack-smart {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 3px solid #10b981;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 60px 0;
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.15);
+        }
+
+        .stack-smart h2 {
+            font-size: 36px;
+            color: #047857;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .stack-smart .subtitle-badge {
+            display: inline-block;
+            background: #10b981;
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stack-smart p {
+            color: #064e3b;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .problem, .solution {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .problem h4 {
+            color: #dc2626;
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .solution h4 {
+            color: #10b981;
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .tag {
+            background: #ffffff;
+            color: #047857;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid #10b981;
+        }
+
+        .beta-badge {
+            text-align: center;
+            color: #047857;
+            font-size: 16px;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 10px 40px rgba(15, 23, 42, 0.25);
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            font-size: 22px;
+            color: #fbbf24;
+            font-weight: 600;
+            margin: 30px 0;
+            line-height: 2;
+        }
+
+        .free-note-contact {
+            background: rgba(34, 197, 94, 0.15);
+            border: 2px solid #10b981;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 30px;
+            color: #ecfdf5;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: #fef2f2;
+            border: 3px solid #fca5a5;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 60px 0;
+        }
+
+        .disclaimer h3 {
+            color: #dc2626;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .disclaimer p {
+            color: #7f1d1d;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .disclaimer-box {
+            background: #fee2e2;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #dc2626;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            .service-formats { grid-template-columns: 1fr; }
+            .additional-services { grid-template-columns: 1fr; }
+            .problem-solution { grid-template-columns: 1fr; }
+            .topics-grid { grid-template-columns: 1fr; }
+            .intro-box { padding: 30px; }
+            .format-card, .additional-card { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>KARINA BUENO</h1>
+        <div class="tagline">Bitcoin & Digital Assets Consulting</div>
+        <div class="subtitle">Legal Counsel | Blockchain & Digital Assets | Regulatory Affairs & Compliance<br>Problem-Solver & Mediator | Client & Partner Relations</div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Intro -->
+        <div class="intro-box">
+            <h2>Personalized Solutions for Your Bitcoin & Digital Assets Journey</h2>
+            <p>Tailored guidance combining legal expertise, regulatory knowledge, and hands-on blockchain experience.</p>
+            <p><strong>Your situation. Your solution. Your pace.</strong></p>
+            <p style="margin-top: 25px; font-size: 18px; color: #0f172a; font-weight: 600;">Primary Focus: Bitcoin</p>
+        </div>
+
+        <!-- About -->
+        <div class="about">
+            <h3>Professional Background & Approach</h3>
+            <p><strong>Lawyer (BR - OAB/SP):</strong> Licensed to practice law in Brazil with expertise in legal structure, compliance, and confidentiality. For matters involving Swiss law, I work alongside qualified Swiss legal professionals to ensure full regulatory compliance.</p>
+            <p><strong>Certified Mediator & Conciliator:</strong> Specialized in active listening, conflict resolution, and guiding clients toward practical, tailored solutions that address their unique challenges.</p>
+            <p><strong>Blockchain & Bitcoin Specialist:</strong> Extensive hands-on experience with protocols, strategies, and risk assessment in the digital assets ecosystem.</p>
+            <p style="margin-top: 20px;"><strong>My approach is client-centered:</strong> I identify your specific challenge, understand what you've tried, assess your concerns, and develop a customized solution—whether technical, strategic, regulatory, or educational.</p>
+        </div>
+
+        <!-- Services -->
+        <h2 class="section-title">Areas of Expertise</h2>
+
+        <!-- Shared Topics -->
+        <div class="shared-topics">
+            <h3>Topics We Cover</h3>
+            <p class="subtitle-text">Depending on your needs, we can address any combination of these areas:</p>
+            
+            <div class="topics-grid">
+                <div class="topic-item">
+                    <strong>Bitcoin Fundamentals</strong>
+                    <span>Philosophy, technology, foundational concepts</span>
+                </div>
+                <div class="topic-item">
+                    <strong>Security & Custody</strong>
+                    <span>Wallet setup, seed management, backup protocols, best practices</span>
+                </div>
+                <div class="topic-item">
+                    <strong>Exchange Operations</strong>
+                    <span>Safe withdrawals, platform evaluation, risk mitigation</span>
+                </div>
+                <div class="topic-item">
+                    <strong>Accumulation Strategies</strong>
+                    <span>Dollar-cost averaging, portfolio planning, long-term thinking</span>
+                </div>
+                <div class="topic-item">
+                    <strong>Digital Payment Solutions</strong>
+                    <span>Crypto credit cards, payment processors, integration</span>
+                </div>
+                <div class="topic-item">
+                    <strong>Advanced Technologies</strong>
+                    <span>Lightning Network, Layer 2 protocols, scaling solutions</span>
+                </div>
+                <div class="topic-item">
+                    <strong>DeFi Strategies</strong>
+                    <span>Conservative approaches to yields, lending, borrowing</span>
+                </div>
+                <div class="topic-item">
+                    <strong>Smart Contract Analysis</strong>
+                    <span>Risk assessment, protocol evaluation, due diligence</span>
+                </div>
+                <div class="topic-item">
+                    <strong>Privacy & Compliance</strong>
+                    <span>Privacy tools, regulatory considerations, compliance frameworks</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Formats -->
+        <h2 class="section-title">Service Formats</h2>
+
+        <div class="service-formats">
+            <!-- Individual Consultation -->
+            <div class="format-card">
+                <h3>Individual Consultation</h3>
+                <p><strong style="color: #f59e0b;">For specific questions or focused topics</strong></p>
+                <p>Targeted sessions addressing particular challenges or questions from the expertise areas listed above.</p>
+                
+                <ul>
+                    <li>Focused problem-solving sessions</li>
+                    <li>Customized documentation per session</li>
+                    <li>Expert guidance on selected topics</li>
+                    <li>Flexible scheduling to meet your needs</li>
+                </ul>
+            </div>
+
+            <!-- Mentorship -->
+            <div class="format-card">
+                <h3>Mentorship Program</h3>
+                <p><strong style="color: #f59e0b;">For comprehensive, structured guidance</strong></p>
+                <p>Multi-session engagement covering multiple topics with ongoing support, implementation assistance, and accountability.</p>
+                
+                <ul>
+                    <li>Structured program with multiple sessions</li>
+                    <li>Comprehensive coverage across relevant topics</li>
+                    <li>Detailed documentation and action plans</li>
+                    <li>Ongoing support between sessions</li>
+                    <li>Implementation guidance and troubleshooting</li>
+                    <li>Progress tracking and strategic planning</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Additional Services -->
+        <h2 class="section-title">Specialized Services</h2>
+
+        <div class="additional-services">
+            <!-- Business Consulting -->
+            <div class="additional-card">
+                <h3>Business Crypto Payment Integration</h3>
+                <p>Strategic consulting for businesses implementing cryptocurrency payment solutions, from planning through execution.</p>
+                
+                <ul>
+                    <li>Payment integration strategy and roadmap development</li>
+                    <li>Technology stack evaluation and selection</li>
+                    <li>Processor analysis (BTCPay Server, Lightning, third-party solutions)</li>
+                    <li>Point-of-sale and e-commerce implementation</li>
+                    <li>Risk management and volatility mitigation strategies</li>
+                    <li>Team training and customer education programs</li>
+                    <li>Marketing strategy for crypto-accepting businesses</li>
+                </ul>
+
+                <p style="margin-top: 25px; font-size: 15px; font-style: italic; color: #64748b;">
+                    Technical and strategic guidance provided in coordination with qualified Swiss legal and tax professionals for regulatory compliance.
+                </p>
+            </div>
+
+            <!-- Relocation -->
+            <div class="additional-card">
+                <h3>Switzerland Relocation Advisory</h3>
+                <p>Comprehensive relocation support for individuals and families moving to Switzerland, based on personal relocation experience.</p>
+                
+                <ul>
+                    <li>Documentation and registration guidance</li>
+                    <li>Housing search coordination (rental and purchase)</li>
+                    <li>Remote property viewing and evaluation services</li>
+                    <li>Education system navigation and school selection</li>
+                    <li>Banking setup with crypto-friendly institutions</li>
+                    <li>Insurance, utilities, and essential services coordination</li>
+                    <li>Local integration support and cultural orientation</li>
+                    <li>Professional network connections (legal, accounting, business services)</li>
+                </ul>
+
+                <p style="margin-top: 25px; font-size: 15px; font-style: italic; color: #64748b;">
+                    Switzerland offers exceptional quality of life, political stability, and a progressive regulatory environment for digital assets. Lugano's Plan ₿ initiative demonstrates the region's commitment to Bitcoin adoption.
+                </p>
+            </div>
+        </div>
+
+        <!-- Stack Smart -->
+        <div class="stack-smart">
+            <div style="text-align: center;">
+                <span class="subtitle-badge">Bitcoin Only</span>
+            </div>
+            <h2>Stack Smart</h2>
+            <p style="text-align: center; font-size: 19px; margin-bottom: 35px;">
+                Data-driven Bitcoin accumulation tool - transforming market volatility into strategic opportunity
+            </p>
+
+            <div class="problem-solution">
+                <div class="problem">
+                    <h4>Challenge:</h4>
+                    <p style="color: #475569; font-size: 15px; line-height: 1.7;">
+                        Many investors make emotionally-driven decisions, buying during FOMO-induced peaks and hesitating during optimal accumulation periods, missing strategic opportunities.
+                    </p>
+                </div>
+                <div class="solution">
+                    <h4>Solution:</h4>
+                    <p style="color: #475569; font-size: 15px; line-height: 1.7;">
+                        Stack Smart provides objective market data including ATH discounts, RSI indicators, and accumulation efficiency metrics, enabling strategic, data-driven decision-making independent of emotional factors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Gamified Interface</span>
+                <span class="tag">Efficiency Scoring</span>
+                <span class="tag">Bitcoin Only</span>
+                <span class="tag">Data-Driven Analytics</span>
+            </div>
+
+            <p class="beta-badge">In Development • Beta Launch 2026 • Early Access for First 500 Users</p>
+            <p style="text-align: center; margin-top: 15px; color: #064e3b; font-size: 15px;">
+                Express interest during consultation to join the priority waitlist.
+            </p>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <h3>Important Legal Disclaimer</h3>
+            
+            <p><strong>This is educational content only, not financial, investment, legal, or tax advice.</strong></p>
+            
+            <p>I do not provide investment recommendations, financial planning, portfolio management, trading signals, tax advice, or legal advice. Nothing discussed during consultations constitutes a recommendation to buy, sell, or hold any asset.</p>
+            
+            <p>All investments carry risk. Cryptocurrency and digital asset activities involve significant risks including but not limited to: smart contract vulnerabilities, security breaches, loss of funds, regulatory changes, extreme market volatility, and potential total loss of capital.</p>
+            
+            <p><strong>I provide education on how these technologies function and how to use them safely.</strong> You are responsible for conducting your own research, assessing your risk tolerance, and making independent judgments. All investment decisions and their consequences are entirely your responsibility.</p>
+            
+            <div class="disclaimer-box">
+                <p style="margin-bottom: 15px;">
+                    <strong>Professional Disclosure:</strong> I am an educator and technical consultant, not a financial advisor, investment advisor, tax professional, or legal counsel for Swiss law matters. For Swiss legal and regulatory matters, I coordinate with qualified Swiss legal professionals. You should consult appropriate licensed professionals for financial, investment, tax, and Swiss legal advice.
+                </p>
+                <p style="margin-bottom: 0; font-size: 14px;">
+                    <strong>Credentials:</strong> Karina Schumacher Bueno is a licensed lawyer (OAB/SP Brazil) and certified mediator & conciliator. Law degree from Brazil. I do not practice Swiss law. For matters requiring Swiss legal expertise, I coordinate with licensed Swiss legal professionals to ensure full regulatory compliance.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            <h2>Schedule a Consultation</h2>
+            <p>Let's discuss your specific situation and determine how I can assist.</p>
+            
+            <div class="contact-info">
+                kabueno.ch@proton.me<br>
+                Twitter: @kakasbq
+            </div>
+            
+            <div class="free-note-contact">
+                First assessment meeting complimentary
+            </div>
+            
+            <p style="font-size: 16px; margin-top: 25px;">
+                Consultations conducted via secure video conference<br>
+                (Signal, Zoom, WhatsApp, or FaceTime)
+            </p>
+            <p style="font-size: 16px; margin-top: 15px;">
+                <strong>All consultations are strictly confidential</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Currently pursuing advanced blockchain education at the University of Nicosia</p>
+        <p>Serving individuals and businesses in Switzerland, Brazil, and internationally</p>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">© 2025 Karina Bueno - Bitcoin & Digital Assets Consulting</p>
+    </footer>
+
+</body>
+</html>
